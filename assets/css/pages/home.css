@@ -1,0 +1,97 @@
+.fv {
+    border-top: 0;
+}
+
+.fv-slider {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: transform 0.5 ease, opacity 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@media (max-width: 768) {
+    .swiper-slide {
+        width: 80%; /* SP時に中央強調したいなら80%程度 */
+        max-width: 320px; /* 任意で最大幅制限 */
+    }
+}
+
+@media (max-width: 400) {
+    .swiper-slide {
+        max-width: 220px; /* 任意で最大幅制限 */
+    }
+}
+
+.swiper-slide img {
+    width: 100%;
+    display: block;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    opacity: 0.85;
+    transform: scale(0.8)!important;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0.5 ease, height 0.5 ease;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent);
+    color: var(--color-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.slide-overlay p {
+    font-size: clamp(50px, 10vw, 100px);
+    font-weight: 700;
+}
+
+.slide-overlay:hover {
+    opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-text);
+    width: clamp(50px, 10vw, 100px);
+    height: clamp(50px, 10vw, 100px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+.profile {
+    background-color: var(--color-gray);
+}
