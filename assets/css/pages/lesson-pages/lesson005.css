@@ -1,0 +1,55 @@
+/* lesson003 CSS */
+.fv {
+    background-color: var(--color-gray);
+    padding: clamp(40px, 6vw, 60px) 0;
+}
+
+.fv-title {
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+.fv-description {
+    max-width: 600px;
+}
+
+/* 自己紹介セクション */
+.self-introductions .container {
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.self-introductions .face-image {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.self-introductions .face-image img {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.self-introductions .self-introduction {
+    margin: 0 auto;
+}
+
+.self-introductions tr {
+    display: table-row;
+}
+
+.self-introductions tr:nth-child(even) {
+    background-color: var(--color-gray);
+}
+
+.self-introductions .self-introduction th {
+    border: 1px solid var(--color-border);
+    padding: 10px;
+}
+
+.self-introductions .self-introduction td {
+    border: 1px solid var(--color-border);
+    padding: 10px;
+}
+
+.questions .question-image img {
+    width: 600px;
+}
